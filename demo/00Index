@@ -1,0 +1,8 @@
+MadgwickExample	example adapted from Sebastian Madgwick
+SVDcalibration	example adapted from Vlad Maximov for SVD calibration
+ekf.calibration.indirect	example adapted from Vlad Maximov for EKF calibration
+model.ahrs.EKF.QUATERNION	example adapted from Vlad Maximov for quaternion based extended Kalman filter
+model.ahrs.LKF.EULER	example adapted from Vlad Maximov for Euler angle based linearized Kalman filter
+model.ahrs.LKF.QUATERNION	example adapted from Vlad Maximov for quaternion based linearized Kalman filter
+model.ahrs.LKF.VMATCH	example adapted from Vlad Maximov for vector matching based linearized Kalman filter
+model.ahrs.UKF.QUATERNION	example adapted from Vlad Maximov for quaternion based unscented Kalman filter

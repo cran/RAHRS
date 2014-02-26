@@ -1,0 +1,5 @@
+useDynLib(RAHRS, .registration = TRUE, .fixes = "C_")
+exportPattern("^[^\\.]")
+import(pracma, RSpincalc)
+
+
