@@ -1,6 +1,3 @@
-#library(pracma)
-#library(RSpincalc)
-#library(Matrix)????
 
 #	*		*		*	EKF QUATERNION *	*		*
 
@@ -1176,7 +1173,7 @@ ret <- .C("MahonyAHRSupdateIMU",as.single(gxi),as.single(gyi),as.single(gzi),as.
 }
 
 #	*	*	*	Function "MadgwickAHRSupdateIMU" Package "RAHRS"		*	*	*
-MadgwickAHRSupdateIMU <- function(gxi,gyi,gzi,axi,ayi,azi,sampleFreqi,betai,twoKpDefi,twoKiDefi,q0i,q1i,q2i,sampleFreq)
+MadgwickAHRSupdateIMU <- function(gxi,gyi,gzi,axi,ayi,azi,sampleFreqi,betai,q0i,q1i,q2i,sampleFreq)#twoKpDefi,twoKiDefi,
 {
 if (!is.numeric(gxi)) stop('Argument <<gxi>> should be a number')
 if (!is.numeric(gyi)) stop('Argument <<gyi>> should be a number')
@@ -1186,17 +1183,17 @@ if (!is.numeric(ayi)) stop('Argument <<ayi>> should be a number')
 if (!is.numeric(azi)) stop('Argument <<azi>> should be a number')
 if (!is.numeric(sampleFreqi)) stop('Argument <<sampleFreqi>> should be a number')
 if (!is.numeric(betai)) stop('Argument <<betai>> should be a number')
-if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
-if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
+#if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
+#if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
 if (!is.numeric(q0i)) stop('Argument <<q0i>> should be a number')
 if (!is.numeric(q1i)) stop('Argument <<q1i>> should be a number')
 if (!is.numeric(q2i)) stop('Argument <<q2i>> should be a number')
 if (!is.numeric(sampleFreq)) stop('Argument <<sampleFreq>> should be a number')
-ret <- .C("MadgwickAHRSupdateIMU",as.single(gxi),as.single(gyi),as.single(gzi),as.single(axi),as.single(ayi),as.single(azi),as.single(sampleFreqi),as.single(betai),as.single(twoKpDefi),as.single(twoKiDefi),as.single(q0i),as.single(q1i),as.single(q2i),as.single(sampleFreq),DUP = TRUE, PACKAGE="RAHRS")
+ret <- .C("MadgwickAHRSupdateIMU",as.single(gxi),as.single(gyi),as.single(gzi),as.single(axi),as.single(ayi),as.single(azi),as.single(sampleFreqi),as.single(betai),as.single(q0i),as.single(q1i),as.single(q2i),as.single(sampleFreq),DUP = TRUE, PACKAGE="RAHRS")#as.single(twoKpDefi),as.single(twoKiDefi),
 }
 
 #	*	*	*	Function "MadgwickAHRSupdate" Package "RAHRS"		*	*	*
-MadgwickAHRSupdate <- function(gxi,gyi,gzi,axi,ayi,azi,mxi,myi,mzi,sampleFreqi,betai,twoKpDefi,twoKiDefi,q0i,q1i,q2i,gz)
+MadgwickAHRSupdate <- function(gxi,gyi,gzi,axi,ayi,azi,mxi,myi,mzi,sampleFreqi,betai,q0i,q1i,q2i,gz)#twoKpDefi,twoKiDefi,
 {
 if (!is.numeric(gxi)) stop('Argument <<gxi>> should be a number')
 if (!is.numeric(gyi)) stop('Argument <<gyi>> should be a number')
@@ -1209,13 +1206,13 @@ if (!is.numeric(myi)) stop('Argument <<myi>> should be a number')
 if (!is.numeric(mzi)) stop('Argument <<mzi>> should be a number')
 if (!is.numeric(sampleFreqi)) stop('Argument <<sampleFreqi>> should be a number')
 if (!is.numeric(betai)) stop('Argument <<betai>> should be a number')
-if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
-if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
+#if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
+#if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
 if (!is.numeric(q0i)) stop('Argument <<q0i>> should be a number')
 if (!is.numeric(q1i)) stop('Argument <<q1i>> should be a number')
 if (!is.numeric(q2i)) stop('Argument <<q2i>> should be a number')
 if (!is.numeric(gz)) stop('Argument <<gz>> should be a number')
-ret <- .C("MadgwickAHRSupdate",as.single(gxi),as.single(gyi),as.single(gzi),as.single(axi),as.single(ayi),as.single(azi),as.single(mxi),as.single(myi),as.single(mzi),as.single(sampleFreqi),as.single(betai),as.single(twoKpDefi),as.single(twoKiDefi),as.single(q0i),as.single(q1i),as.single(q2i),as.single(gz),DUP = TRUE, PACKAGE="RAHRS")
+ret <- .C("MadgwickAHRSupdate",as.single(gxi),as.single(gyi),as.single(gzi),as.single(axi),as.single(ayi),as.single(azi),as.single(mxi),as.single(myi),as.single(mzi),as.single(sampleFreqi),as.single(betai),as.single(q0i),as.single(q1i),as.single(q2i),as.single(gz),DUP = TRUE, PACKAGE="RAHRS")#as.single(twoKpDefi),as.single(twoKiDefi),
 }
 
 #	*	*	*	Function "MahonyAHRSupdate" Package "RAHRS"		*	*	*
@@ -1266,7 +1263,7 @@ ret <- .C("MahonyAHRSupdateIMU2",as.single(gxi),as.single(gyi),as.single(gzi),as
 }
 
 #	*	*	*	Function "MadgwickAHRSupdateIMU2" Package "RAHRS"		*	*	*
-MadgwickAHRSupdateIMU2 <- function(gxi,gyi,gzi,axi,ayi,azi,sampleFreqi,betai,twoKpDefi,twoKiDefi,q0i,q1i,q2i,sampleFreq)
+MadgwickAHRSupdateIMU2 <- function(gxi,gyi,gzi,axi,ayi,azi,sampleFreqi,betai,q0i,q1i,q2i,sampleFreq)#twoKpDefi,twoKiDefi,
 {
 if (!is.numeric(gxi)) stop('Argument <<gxi>> should be a number')
 if (!is.numeric(gyi)) stop('Argument <<gyi>> should be a number')
@@ -1276,17 +1273,17 @@ if (!is.numeric(ayi)) stop('Argument <<ayi>> should be a number')
 if (!is.numeric(azi)) stop('Argument <<azi>> should be a number')
 if (!is.numeric(sampleFreqi)) stop('Argument <<sampleFreqi>> should be a number')
 if (!is.numeric(betai)) stop('Argument <<betai>> should be a number')
-if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
-if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
+#if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
+#if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
 if (!is.numeric(q0i)) stop('Argument <<q0i>> should be a number')
 if (!is.numeric(q1i)) stop('Argument <<q1i>> should be a number')
 if (!is.numeric(q2i)) stop('Argument <<q2i>> should be a number')
 if (!is.numeric(sampleFreq)) stop('Argument <<sampleFreq>> should be a number')
-ret <- .C("MadgwickAHRSupdateIMU2",as.single(gxi),as.single(gyi),as.single(gzi),as.single(axi),as.single(ayi),as.single(azi),as.single(sampleFreqi),as.single(betai),as.single(twoKpDefi),as.single(twoKiDefi),as.single(q0i),as.single(q1i),as.single(q2i),as.single(sampleFreq),DUP = TRUE, PACKAGE="RAHRS")
+ret <- .C("MadgwickAHRSupdateIMU2",as.single(gxi),as.single(gyi),as.single(gzi),as.single(axi),as.single(ayi),as.single(azi),as.single(sampleFreqi),as.single(betai),as.single(q0i),as.single(q1i),as.single(q2i),as.single(sampleFreq),DUP = TRUE, PACKAGE="RAHRS")#as.single(twoKpDefi),as.single(twoKiDefi),
 }
 
 #	*	*	*	Function "MadgwickAHRSupdate2" Package "RAHRS"		*	*	*
-MadgwickAHRSupdate2 <- function(gxi,gyi,gzi,axi,ayi,azi,mxi,myi,mzi,sampleFreqi,betai,twoKpDefi,twoKiDefi,q0i,q1i,q2i,gz)
+MadgwickAHRSupdate2 <- function(gxi,gyi,gzi,axi,ayi,azi,mxi,myi,mzi,sampleFreqi,betai,q0i,q1i,q2i,gz)#twoKpDefi,twoKiDefi,
 {
 if (!is.numeric(gxi)) stop('Argument <<gxi>> should be a number')
 if (!is.numeric(gyi)) stop('Argument <<gyi>> should be a number')
@@ -1299,13 +1296,13 @@ if (!is.numeric(myi)) stop('Argument <<myi>> should be a number')
 if (!is.numeric(mzi)) stop('Argument <<mzi>> should be a number')
 if (!is.numeric(sampleFreqi)) stop('Argument <<sampleFreqi>> should be a number')
 if (!is.numeric(betai)) stop('Argument <<betai>> should be a number')
-if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
-if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
+#if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
+#if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
 if (!is.numeric(q0i)) stop('Argument <<q0i>> should be a number')
 if (!is.numeric(q1i)) stop('Argument <<q1i>> should be a number')
 if (!is.numeric(q2i)) stop('Argument <<q2i>> should be a number')
 if (!is.numeric(gz)) stop('Argument <<gz>> should be a number')
-ret <- .C("MadgwickAHRSupdate2",as.single(gxi),as.single(gyi),as.single(gzi),as.single(axi),as.single(ayi),as.single(azi),as.single(mxi),as.single(myi),as.single(mzi),as.single(sampleFreqi),as.single(betai),as.single(twoKpDefi),as.single(twoKiDefi),as.single(q0i),as.single(q1i),as.single(q2i),as.single(gz),DUP = TRUE, PACKAGE="RAHRS")
+ret <- .C("MadgwickAHRSupdate2",as.single(gxi),as.single(gyi),as.single(gzi),as.single(axi),as.single(ayi),as.single(azi),as.single(mxi),as.single(myi),as.single(mzi),as.single(sampleFreqi),as.single(betai),as.single(q0i),as.single(q1i),as.single(q2i),as.single(gz),DUP = TRUE, PACKAGE="RAHRS")#as.single(twoKpDefi),as.single(twoKiDefi),
 }
 
 #	*	*	*	Function "MahonyAHRSupdate2" Package "RAHRS"		*	*	*
@@ -1356,7 +1353,7 @@ ret <- .C("MahonyAHRSupdateIMUDbl",as.numeric(gxi),as.numeric(gyi),as.numeric(gz
 }
 
 #	*	*	*	Function "MadgwickAHRSupdateIMUDbl" Package "RAHRS"		*	*	*
-MadgwickAHRSupdateIMUDbl <- function(gxi,gyi,gzi,axi,ayi,azi,sampleFreqi,betai,twoKpDefi,twoKiDefi,q0i,q1i,q2i,sampleFreq)
+MadgwickAHRSupdateIMUDbl <- function(gxi,gyi,gzi,axi,ayi,azi,sampleFreqi,betai,q0i,q1i,q2i,sampleFreq)#twoKpDefi,twoKiDefi,
 {
 if (!is.numeric(gxi)) stop('Argument <<gxi>> should be a number')
 if (!is.numeric(gyi)) stop('Argument <<gyi>> should be a number')
@@ -1366,17 +1363,17 @@ if (!is.numeric(ayi)) stop('Argument <<ayi>> should be a number')
 if (!is.numeric(azi)) stop('Argument <<azi>> should be a number')
 if (!is.numeric(sampleFreqi)) stop('Argument <<sampleFreqi>> should be a number')
 if (!is.numeric(betai)) stop('Argument <<betai>> should be a number')
-if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
-if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
+#if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
+#if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
 if (!is.numeric(q0i)) stop('Argument <<q0i>> should be a number')
 if (!is.numeric(q1i)) stop('Argument <<q1i>> should be a number')
 if (!is.numeric(q2i)) stop('Argument <<q2i>> should be a number')
 if (!is.numeric(sampleFreq)) stop('Argument <<sampleFreq>> should be a number')
-ret <- .C("MadgwickAHRSupdateIMUDbl",as.numeric(gxi),as.numeric(gyi),as.numeric(gzi),as.numeric(axi),as.numeric(ayi),as.numeric(azi),as.numeric(sampleFreqi),as.numeric(betai),as.numeric(twoKpDefi),as.numeric(twoKiDefi),as.numeric(q0i),as.numeric(q1i),as.numeric(q2i),as.numeric(sampleFreq),DUP = TRUE, PACKAGE="RAHRS")
+ret <- .C("MadgwickAHRSupdateIMUDbl",as.numeric(gxi),as.numeric(gyi),as.numeric(gzi),as.numeric(axi),as.numeric(ayi),as.numeric(azi),as.numeric(sampleFreqi),as.numeric(betai),as.numeric(q0i),as.numeric(q1i),as.numeric(q2i),as.numeric(sampleFreq),DUP = TRUE, PACKAGE="RAHRS")#as.numeric(twoKpDefi),as.numeric(twoKiDefi),
 }
 
 #	*	*	*	Function "MadgwickAHRSupdateDbl" Package "RAHRS"		*	*	*
-MadgwickAHRSupdateDbl <- function(gxi,gyi,gzi,axi,ayi,azi,mxi,myi,mzi,sampleFreqi,betai,twoKpDefi,twoKiDefi,q0i,q1i,q2i,gz)
+MadgwickAHRSupdateDbl <- function(gxi,gyi,gzi,axi,ayi,azi,mxi,myi,mzi,sampleFreqi,betai,q0i,q1i,q2i,gz)#twoKpDefi,twoKiDefi,
 {
 if (!is.numeric(gxi)) stop('Argument <<gxi>> should be a number')
 if (!is.numeric(gyi)) stop('Argument <<gyi>> should be a number')
@@ -1389,13 +1386,13 @@ if (!is.numeric(myi)) stop('Argument <<myi>> should be a number')
 if (!is.numeric(mzi)) stop('Argument <<mzi>> should be a number')
 if (!is.numeric(sampleFreqi)) stop('Argument <<sampleFreqi>> should be a number')
 if (!is.numeric(betai)) stop('Argument <<betai>> should be a number')
-if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
-if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
+#if (!is.numeric(twoKpDefi)) stop('Argument <<twoKpDefi>> should be a number')
+#if (!is.numeric(twoKiDefi)) stop('Argument <<twoKiDefi>> should be a number')
 if (!is.numeric(q0i)) stop('Argument <<q0i>> should be a number')
 if (!is.numeric(q1i)) stop('Argument <<q1i>> should be a number')
 if (!is.numeric(q2i)) stop('Argument <<q2i>> should be a number')
 if (!is.numeric(gz)) stop('Argument <<gz>> should be a number')
-ret <- .C("MadgwickAHRSupdateDbl",as.numeric(gxi),as.numeric(gyi),as.numeric(gzi),as.numeric(axi),as.numeric(ayi),as.numeric(azi),as.numeric(mxi),as.numeric(myi),as.numeric(mzi),as.numeric(sampleFreqi),as.numeric(betai),as.numeric(twoKpDefi),as.numeric(twoKiDefi),as.numeric(q0i),as.numeric(q1i),as.numeric(q2i),as.numeric(gz),DUP = TRUE, PACKAGE="RAHRS")
+ret <- .C("MadgwickAHRSupdateDbl",as.numeric(gxi),as.numeric(gyi),as.numeric(gzi),as.numeric(axi),as.numeric(ayi),as.numeric(azi),as.numeric(mxi),as.numeric(myi),as.numeric(mzi),as.numeric(sampleFreqi),as.numeric(betai),as.numeric(q0i),as.numeric(q1i),as.numeric(q2i),as.numeric(gz),DUP = TRUE, PACKAGE="RAHRS")#as.numeric(twoKpDefi),as.numeric(twoKiDefi),
 }
 
 #	*	*	*	Function "MahonyAHRSupdateDbl" Package "RAHRS"		*	*	*

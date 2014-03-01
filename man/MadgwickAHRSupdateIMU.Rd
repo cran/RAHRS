@@ -10,7 +10,7 @@ Madgwick's algorithm for IMU update method.
 }
 \usage{
 MadgwickAHRSupdateIMU(gxi, gyi, gzi, axi, ayi, azi, sampleFreqi, betai, 
-twoKpDefi, twoKiDefi, q0i, q1i, q2i, sampleFreq)
+q0i, q1i, q2i, sampleFreq)
 }
 \arguments{
   \item{gxi}{
@@ -36,12 +36,6 @@ Sample frequency.
 }
   \item{betai}{
 Algorithm gain beta.
-}
-  \item{twoKpDefi}{
-Kp constant passed as a parameter
-}
-  \item{twoKiDefi}{
-Ki constant passed as a parameter
 }
   \item{q0i}{
 Quaternion[0]

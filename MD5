@@ -1,12 +1,12 @@
-aaca06748923c76255dc18acb0fdac6e *DESCRIPTION
+13fc8cc1410c00f7aa3cf538996e8ff4 *DESCRIPTION
 eb308e732b869f31d8c98cdfc3c12f2e *NAMESPACE
-55168375cf818a9b123d651220ae7a3f *R/RAHRS.R
+59a36ad2c681a892aac13417a0b64225 *R/RAHRS.R
 638179fa285011ba1d3a6c4d7d7b41a3 *R/zzz.r
-e705f7156d4158fbe2422f12cc37820c *data/MadgwickData.rda
-11821c852ef92cde7e00c2c45652724c *data/accl.coefs.RData
-0baae72d53971ae9f372a16217e442ab *data/anglesGyroLib.RData
-964c49c0ce19dea8e17207054b76210c *data/calibrationGyroLib.RData
-a364fe8d3fbd5a66ea7384ae128de7d2 *data/magn.coefs.RData
+0c77ac00bed57f9581be9ace8469ed38 *data/MadgwickData.rda
+346613ee3faa9d950d6a11d169f637d7 *data/accl.coefs.RData
+9f16515639139e5edf0fded8fbeec7b3 *data/anglesGyroLib.RData
+388adbbeacf7cf225a22d6922e7d44f2 *data/calibrationGyroLib.RData
+97a6712ade89160ec2318e28000b778c *data/magn.coefs.RData
 16da937f0ccccf94c8455b2a92446325 *demo/00Index
 df3d73f20859ecb0dee0fd32ee10f507 *demo/MadgwickExample.R
 099367540369bba37b280b2de2a6f468 *demo/SVDcalibration.R
@@ -17,8 +17,8 @@ f52f90b400c0bc3a4ac5a82b7497e1e2 *demo/model.ahrs.LKF.QUATERNION.R
 3c3d594c1bd5f153de002346c4f8b600 *demo/model.ahrs.LKF.VMATCH.R
 fa7504017780f77bbf5742392bd91db9 *demo/model.ahrs.UKF.QUATERNION.R
 741670f92ac7bd6d5778e5dc084c8cdf *man/MadgwickAHRS.Rd
-afdd2aaa1138cf2198d56816414d14b6 *man/MadgwickAHRSupdate.Rd
-0fae3ef5f3ed03e59d645a9705e97867 *man/MadgwickAHRSupdateIMU.Rd
+ec77c85194425d2f3c21b72c8ce27267 *man/MadgwickAHRSupdate.Rd
+4f87042fe1f702def0f7d0689bb40b8b *man/MadgwickAHRSupdateIMU.Rd
 c45685534fb4f8817ab25dff6ab28336 *man/MadgwickData.Rd
 8a000ed2392a8eab97810259668c836d *man/MadgwickIMU.Rd
 667effaf274f9a35d1c772ed4c8753ac *man/MahonyAHRSupdate.Rd
@@ -36,4 +36,4 @@ cb526a98f7cbd54970c818ecfd2ad935 *man/anglesGyroLib.Rd
 e5ba4c858576768c32e0381047020584 *man/ekf.calibration.indirect.Rd
 81aa59134d8ee2740b0ac29e13afa866 *man/magn.coefs.Rd
 3188e7c98522cbfd37b56120686cbdad *man/svd.calibration.Rd
-20c236c0608eef2db0059a654e4ff245 *src/R-AHRS-IMU.c
+8472c1381fb91dfdacec2911579cf3f9 *src/R-AHRS-IMU.c

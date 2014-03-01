@@ -3,7 +3,7 @@ Type: Package
 Title: Data fusion filters for Attitude Heading Reference System (AHRS)
         with several variants of the Kalman filter and the Mahoney and
         Madgwick filters.
-Version: 1.0.0
+Version: 1.0.1
 Encoding: UTF-8
 Authors@R: c(person(given = "Jose'", family = "Gama", role = c("aut","cre","trl"),email = "jgama@abo.fi"),
     person(given = "Vlad", family = "Maximov", role = "aut"),
@@ -17,17 +17,14 @@ Description: R implementation of data fusion filters for Attitude Heading Refere
 License: GPL (>= 3)
 LazyLoad: yes
 LazyData: yes
-Depends: R (>= 2.10), pracma, RSpincalc
+Depends: R (>= 2.10), pracma, RSpincalc (>= 1.0.1)
+Packaged: 2014-03-01 12:08:18 UTC; poky
 Author: Jose' Gama [aut, cre, trl],
   Vlad Maximov [aut],
   Sebastian O.H. Madgwick [aut],
   Alain Barraud [ctb],
   Göran Högnäs [ths]
 Maintainer: Jose' Gama <jgama@abo.fi>
-Repository: CRAN
-Repository/R-Forge/Project: rahrs
-Repository/R-Forge/Revision: 5
-Repository/R-Forge/DateTimeStamp: 2014-02-26 06:01:07
-Date/Publication: 2014-02-26 09:50:56
-Packaged: 2014-02-26 07:16:32 UTC; rforge
 NeedsCompilation: yes
+Repository: CRAN
+Date/Publication: 2014-03-01 16:15:07

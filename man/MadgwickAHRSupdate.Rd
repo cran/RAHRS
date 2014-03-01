@@ -10,7 +10,7 @@ Madgwick's algorithm for AHRS update method.
 }
 \usage{
 MadgwickAHRSupdate(gxi, gyi, gzi, axi, ayi, azi, mxi, myi, mzi, sampleFreqi, 
-betai, twoKpDefi, twoKiDefi, q0i, q1i, q2i, gz)
+betai, q0i, q1i, q2i, gz)
 }
 \arguments{
   \item{gxi}{
@@ -45,12 +45,6 @@ Sample frequency.
 }
   \item{betai}{
 Algorithm gain beta.
-}
-  \item{twoKpDefi}{
-Kp constant passed as a parameter
-}
-  \item{twoKiDefi}{
-Ki constant passed as a parameter
 }
   \item{q0i}{
 Quaternion[0]
