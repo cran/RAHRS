@@ -1,16 +1,15 @@
 Package: RAHRS
 Type: Package
-Title: Data fusion filters for Attitude Heading Reference System (AHRS)
-        with several variants of the Kalman filter and the Mahoney and
-        Madgwick filters.
-Version: 1.0.1
+Title: Data Fusion Filters for Attitude Heading Reference System (AHRS)
+        with Several Variants of the Kalman Filter and the Mahoney and
+        Madgwick Filters
+Version: 1.0.2
 Encoding: UTF-8
-Authors@R: c(person(given = "Jose'", family = "Gama", role = c("aut","cre","trl"),email = "jgama@abo.fi"),
+Authors@R: c(person(given = "Jose", family = "Gama", role = c("aut","cre","trl"),email = "rxprtgama@gmail.com"),
     person(given = "Vlad", family = "Maximov", role = "aut"),
     person(given = "Sebastian", family = "O.H. Madgwick", role = "aut"),
-    person(given = "Alain", family = "Barraud", role = "ctb"),
-    person(given = "Göran", family = "Högnäs", role = "ths"))   
-Description: R implementation of data fusion filters for Attitude Heading Reference System (AHRS) based on
+    person(given = "Alain", family = "Barraud", role = "ctb"))   
+Description: Data fusion filters for Attitude Heading Reference System (AHRS) based on
     Vlad Maximov's GyroLib AHRS library (quaternion based linearized/extended/unscented Kalman filter,
     Euler based LKF, gyro-free with vector matching, SVD calibration and EKF calibration),
     Sebastian O.H. Madgwick AHRS algorithms and Sebastian O.H. Madgwick implementation of Mayhony et al AHRS algorithm.
@@ -18,13 +17,15 @@ License: GPL (>= 3)
 LazyLoad: yes
 LazyData: yes
 Depends: R (>= 2.10), pracma, RSpincalc (>= 1.0.1)
-Packaged: 2014-03-01 12:08:18 UTC; poky
-Author: Jose' Gama [aut, cre, trl],
+Author: Jose Gama [aut, cre, trl],
   Vlad Maximov [aut],
   Sebastian O.H. Madgwick [aut],
-  Alain Barraud [ctb],
-  Göran Högnäs [ths]
-Maintainer: Jose' Gama <jgama@abo.fi>
-NeedsCompilation: yes
+  Alain Barraud [ctb]
+Maintainer: Jose Gama <rxprtgama@gmail.com>
 Repository: CRAN
-Date/Publication: 2014-03-01 16:15:07
+Repository/R-Forge/Project: rahrs
+Repository/R-Forge/Revision: 15
+Repository/R-Forge/DateTimeStamp: 2015-07-18 10:30:57
+Date/Publication: 2015-07-18 17:36:39
+NeedsCompilation: yes
+Packaged: 2015-07-18 10:45:11 UTC; rforge
